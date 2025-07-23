@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+header {
+    background:black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game {
+    background: #fff;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(14, 17, 216, 0.1);
+}
+
+button {
+    
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: blue;
+}
+
+.cart {
+    position: static;
+    margin: 20px;
+    background: white;
+    padding: 10px;
+    text-align: right;
+    width: 200px;
+
+    
+}
+ul{
+    padding:0px;
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    gap: 90px;
+        
+}
