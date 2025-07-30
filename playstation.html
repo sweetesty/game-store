@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<header>
+    <div class="logo-nav">
+      <img src="folder.img/WhatsApp Image 2025-07-30 at 08.19.27_88a349ad.jpg" alt="GameNova logo" class="logo">
+      <h1>🎮 GameNova</h1>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search games...">
+    </div>
+
+    <nav>
+      <ul class="nav-buttons">
+        <li><button onclick="location.href='game.html'">HOME</button></li>
+        <li><button onclick="location.href='store.html'">STORE</button></li>
+        <li><button onclick="location.href='playstation.html'">PLAYSTATION</button></li>
+        <li><button onclick="location.href='xbox.html'">XBOX</button></li>
+          <li><button onclick="location.href='login.html'">SIGN UP/LOGIN</button></li>
+      </ul>
+    </nav>
+
+    <div class="cart">
+      <h3 style="cursor:pointer;" onclick="location.href='cart.html'">
+        <button>🛒 CART (<span id="cart-count">0</span>)</button>
+      </h3>
+    </div>
+  </header>
+<body>
+    <div class="main-content">
+    <div class="container" id="games">
+
+      <div class="game" data-id="1">
+        <img src="folder.img/Call-of-Duty-Infinite-Warfare-PS4-474x600-1.jpg" alt="Call of Duty">
+        <h4>Call of Duty</h4>
+        <p>Price: ₦50,000</p>
+        <button onclick="addToCart(1)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="2">
+        <img src="folder.img/God-of-War-Ragnarok-PS5-468x600-1.jpg" alt="God of War">
+        <h4>God of War</h4>
+        <p>Price: ₦30,000</p>
+        <button onclick="addToCart(2)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="3">
+        <img src="folder.img/Gran-Turismo-7-PS5-474x600-1.jpg" alt="Gran Turismo 7">
+        <h4>Gran Turismo 7</h4>
+        <p>Price: ₦20,000</p>
+        <button onclick="addToCart(3)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="4">
+        <img src="folder.img/Mortal-Kombat-1-PS5-472x600-1.jpg" alt="Mortal Kombat">
+        <h4>Mortal Kombat</h4>
+        <p>Price: ₦60,000</p>
+        <button onclick="addToCart(4)">Add to Cart</button>
+      </div>
+       <div class="game" data-id="5">
+        <img src="folder.img/Grand-Theft-Auto-V-.jpg" alt="Grand Theft Auto V">
+        <h4>Grand Theft Auto V</h4>
+        <p>Price: ₦45,000</p>
+        <button onclick="addToCart(5)">Add to Cart</button>
+      </div>
+
+</body>
+</html>

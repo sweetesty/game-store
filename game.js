@@ -1,4 +1,3 @@
-
 const games = [ 
   { id: 1, name: "Call of Duty", price: 50000 },
   { id: 2, name: "God of War", price: 30000 },
@@ -25,12 +24,11 @@ function updateCartCount() {
   }
 }
 
-// ✅ Render Cart Page (for cart.html)
 function renderCartPage() {
   const cartItems = document.getElementById('cart-items');
   const totalAmount = document.getElementById('total-amount');
 
-  if (!cartItems || !totalAmount) return; // Exit if not on cart.html
+  if (!cartItems || !totalAmount) return; // Only run if on cart page
 
   const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
   cartItems.innerHTML = '';
@@ -52,19 +50,19 @@ function renderCartPage() {
   totalAmount.textContent = total.toLocaleString();
 }
 
-// ✅ Run on page load
-document.addEventListener('DOMContentLoaded', () => {
-  updateCartCount();     // Update cart number on all pages
-  renderCartPage();      // Render cart details if on cart.html
-});
-// Authentication
-document.addEventListener("DOMContentLoaded", () => {
+
+// Authentication Logic
+
+
+function setupAuthentication() {
   const loginForm = document.querySelector("#login-form");
   const signupForm = document.querySelector("#signup-form");
+
+  if (!loginForm || !signupForm) return;
+
   const loginBtn = loginForm.querySelector("button");
   const signupBtn = signupForm.querySelector("button");
 
-  // Sign Up
   signupBtn.addEventListener("click", () => {
     const inputs = signupForm.querySelectorAll("input");
     const [email, password, fullName, username] = [...inputs].map(i => i.value.trim());
@@ -80,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Log In
   loginBtn.addEventListener("click", () => {
     const inputs = loginForm.querySelectorAll("input");
     const [loginId, password] = [...inputs].map(i => i.value.trim());
@@ -92,4 +89,23 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Invalid credentials. Please try again or sign up.");
     }
   });
+}
+
+
+// Hamburger Menu for Mobile
+
+
+function toggleMenu() {
+  const menu = document.getElementById("nav-menu");
+  if (menu) {
+    menu.classList.toggle("show");
+  }
+}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateCartCount();     // Update cart count everywhere
+  renderCartPage();      // Only applies on cart.html
+  setupAuthentication(); // Only runs if login/signup forms are present
 });

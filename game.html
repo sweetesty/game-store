@@ -18,32 +18,33 @@
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Search games...">
     </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-    <nav>
+    <nav id="nav-menu">
       <ul class="nav-buttons">
         <li><button onclick="location.href='game.html'">HOME</button></li>
         <li><button onclick="location.href='store.html'">STORE</button></li>
         <li><button onclick="location.href='playstation.html'">PLAYSTATION</button></li>
         <li><button onclick="location.href='xbox.html'">XBOX</button></li>
-          <li><button onclick="location.href='login.html'">Sign Up/Login</button></li>
+          <li><button onclick="location.href='login.html'">SIGN UP/LOGIN</button></li>
       </ul>
     </nav>
 
     <div class="cart">
-      <h3 style="cursor:pointer;" onclick="location.href='cart.html'">
-        🛒 CART (<span id="cart-count">0</span>)
+      <h3><button style="cursor:pointer;" onclick="location.href='cart.html'">
+       🛒 CART (<span id="cart-count">0</span>)</button>
       </h3>
+      </button>
     </div>
   </header>
 
   <section class="hero-banner">
-    <img src="folder.img/marios.jpeg" alt="Hero Banner">
-    <div class="hero-text">
-      <h2>PlayStation 5 Games</h2>
-      <p>Shop FIFA 24, God of War & more</p>
-      <a href="#" class="btn" onclick="location.href='shop.html'">Shop Now</a>
-    </div>
-  </section>
+  <div class="hero-text">
+    <h2>Call of Duty: Modern Warfare</h2>
+    <p>Dominate the battlefield</p>
+    <a href="#" class="btn" onclick="location.href='shop.html'">Shop Now</a>
+  </div>
+</section>
 
   <section class="shop-category">
     <h2>Shop by Category</h2>

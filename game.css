@@ -1,102 +1,98 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: serif;
+    background: #ffffff;
+    color: #333;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: white;
+    box-sizing: border-box;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px 30px;
   background-color: black;
   color: white;
   flex-wrap: wrap;
+  gap: 10px;
 }
+
 .logo-nav {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+nav {
+  flex: 1;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.search-bar {
+  padding: 8px 12px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.cart {
+  display: flex;
+  align-items: center;
+;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
 }
 
 .logo {
   width: 50px;
   height: 50px;
   object-fit: contain;
+  font-size: 15px;
 }
 
-.cart {
-  background-color: white;
-  color: black;
-  padding: 10px;
-  border-radius: 10px;
-  margin-left: auto;
-  min-width: 200px;
+.logo span {
+  font-weight: bold;
+  color:red;
 }
 
-nav ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 90px;
-    margin: 0;
-}
 
-.search-bar {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  gap: 10px;
-}
-
-.search-bar input {
-  padding: 10px;
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-.search-bar button {
-  padding: 10px 16px;
-  background-color: #ff3c3c;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.search-bar button:hover {
-  background-color: #e02e2e;
-}
 
 .hero-banner {
-  position: relative;
-  width: 100%;
+  background-image: url('folder.img/call-of-duty-modern-warfare-ps4-wallpapers-53.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   height: 350px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
 .hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: none;
 }
 
 .hero-text {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  color: white;
-  text-shadow: 1px 1px 5px black;
+  position: relative;
+  text-shadow: 5px 5px 8px black;
 }
 
 .hero-text h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
@@ -104,7 +100,7 @@ nav ul {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background: #ff3c3c;
+  background: rgb(43, 2, 84);
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -115,37 +111,46 @@ nav ul {
   background: #f5f5f5;
   text-align: center;
 }
-
+ 
 .shop-category h2 {
   margin-bottom: 30px;
   font-size: 2rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
 }
 
 .categories {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
+  justify-items: center;
 }
 
 .category {
   background: white;
-  width: 180px;
+  width: 200px; 
+  height: 180px; 
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .category:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
 .category img {
   width: 100%;
   height: 120px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
 }
 
@@ -175,67 +180,188 @@ nav ul {
 }
 
 .main-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 30px;
-    gap: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 40px;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .game {
-    background: #fff;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(14, 17, 216, 0.1);
-    border-radius: 10px;
-    transition: all 0.3s ease;
+  background: #f9f9f9;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(14, 17, 216, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .game img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 6px;
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
 .game:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 button {
-    background: lightgray;
-    color: black;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
+  background-color: rgb(21, 2, 40);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #ff3c3c;
-    color: white;
+  background: rgb(188, 206, 251);
 }
 
 .cart ul {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 .cart li {
-    margin-bottom: 10px;
-    font-size: 16px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
+@media (max-width: 500px) {
+  header {
+    align-items: first baseline;
+    width: 90%;
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo-nav, .cart {
+    margin: 10px 0;
+  }
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer {
+  background-color: gray;
+  padding: 40px 20px 20px;
+  color: #222;
+  text-align: center;
+}
+
+.footer-middle {
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  margin: 0;
+}
+
+.footer-logo span {
+  font-weight: bold;
+  color: rgb(1, 1, 112);
+}
+
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom a {
+  color: #666;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Hide menu by default on small screen */
+@media (max-width: 768px) {
+  #nav-menu {
+    display: none;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  #nav-menu.show {
+    display: block;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    background: black;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .nav-buttons li button {
+    background: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+  }
+
+  .nav-buttons li button:hover {
+    background: #333;
+  }
+}
