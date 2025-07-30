@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Game Store</title>
-  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="game.css" />
   <script src="game.js" defer></script>
 </head>
 <body>
 
   <header>
-    <h1>🎮 GAME STORE</h1>
+  <div class="logo-nav">
+    <img src="folder.img/WhatsApp Image 2025-07-30 at 08.19.27_88a349ad.jpg" alt="GameNova logo" class="logo">
+      <h1>🎮 GameNova </h1>
+  </div>
+  
     <nav>
       <ul class="nav-buttons">
         <li><button onclick="location.href='home.html'">HOME</button></li>
@@ -19,17 +23,73 @@
         <li><button onclick="location.href='xbox.html'">XBOX</button></li>
       </ul>
     </nav>
-  </header>
 
-  <div class="container" id="games">
-    <div class="game">
-      <img src="image folder/Call-of-Duty-Infinite-Warfare-PS4-474x600-1.webp" alt="COD">
+    <div class="cart">
+  <h3 style="cursor:pointer;" onclick="location.href='cart.html'">
+    🛒 CART (<span id="cart-count">0</span>)
+  </h3>
+  
+</div>
+
+  </header>
+   <section class="hero-banner">
+    <img src="folder.img/marios.jpeg" alt="Hero Banner">
+    <div class="hero-text">
+      <h2>PlayStation 5 Games</h2>
+      <p>Shop FIFA 24, God of War & more</p>
+      <a href="#" class="btn" onclick="location.href='shop.html'">Shop Now</a>
+    </div>
+  </section>
+<section class="shop-category">
+  <h2>Shop by Category</h2>
+  <div class="categories">
+    <div class="category">
+      <img src="folder.img/playstation.png" alt="PS5">
+      <p>PlayStation 5</p>
+    </div>
+    <div class="category">
+      <img src="folder.img/xboxw.png" alt="Xbox">
+      <p>Xbox</p>
+    </div>
+    <div class="category">
+      <img src="folder.img/nintendo.png" alt="Nintendo">
+      <p>Nintendo</p>
+    </div>
     
   </div>
+</section>
+  <div class="main-content">
+    <div class="container" id="games">
 
-  <div class="cart">
-    <button onclick="location.href='cart.html'"><h3>🛒 CART</h3></button>
-    <ul id="cart-items"></ul>
+      <div class="game" data-id="1">
+        <img src="folder.img/Call-of-Duty-Infinite-Warfare-PS4-474x600-1.webp" alt="Call of Duty">
+        <h4>Call of Duty</h4>
+        <p>Price: $50</p>
+        <button onclick="addToCart(1)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="2">
+        <img src="folder.img/God-of-War-Ragnarok-PS5-468x600-1.webp" alt="God of War">
+        <h4>God of War</h4>
+        <p>Price: $30</p>
+        <button onclick="addToCart(2)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="3">
+        <img src="folder.img/Gran-Turismo-7-PS5-474x600-1.webp" alt="Gran Turismo 7">
+        <h4>Gran Turismo 7</h4>
+        <p>Price: $20</p>
+        <button onclick="addToCart(3)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="4">
+        <img src="folder.img/Mortal-Kombat-1-PS5-472x600-1.webp" alt="Mortal Kombat">
+        <h4>Mortal Kombat</h4>
+        <p>Price: $60</p>
+        <button onclick="addToCart(4)">Add to Cart</button>
+      </div>
+
+    </div>
   </div>
 
 </body>
