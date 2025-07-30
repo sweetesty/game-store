@@ -10,29 +10,33 @@
 <body>
 
   <header>
-  <div class="logo-nav">
-    <img src="folder.img/WhatsApp Image 2025-07-30 at 08.19.27_88a349ad.jpg" alt="GameNova logo" class="logo">
-      <h1>🎮 GameNova </h1>
-  </div>
-  
+    <div class="logo-nav">
+      <img src="folder.img/WhatsApp Image 2025-07-30 at 08.19.27_88a349ad.jpg" alt="GameNova logo" class="logo">
+      <h1>🎮 GameNova</h1>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search games...">
+    </div>
+
     <nav>
       <ul class="nav-buttons">
-        <li><button onclick="location.href='home.html'">HOME</button></li>
+        <li><button onclick="location.href='game.html'">HOME</button></li>
         <li><button onclick="location.href='store.html'">STORE</button></li>
         <li><button onclick="location.href='playstation.html'">PLAYSTATION</button></li>
         <li><button onclick="location.href='xbox.html'">XBOX</button></li>
+          <li><button onclick="location.href='login.html'">Sign Up/Login</button></li>
       </ul>
     </nav>
 
     <div class="cart">
-  <h3 style="cursor:pointer;" onclick="location.href='cart.html'">
-    🛒 CART (<span id="cart-count">0</span>)
-  </h3>
-  
-</div>
-
+      <h3 style="cursor:pointer;" onclick="location.href='cart.html'">
+        🛒 CART (<span id="cart-count">0</span>)
+      </h3>
+    </div>
   </header>
-   <section class="hero-banner">
+
+  <section class="hero-banner">
     <img src="folder.img/marios.jpeg" alt="Hero Banner">
     <div class="hero-text">
       <h2>PlayStation 5 Games</h2>
@@ -40,57 +44,96 @@
       <a href="#" class="btn" onclick="location.href='shop.html'">Shop Now</a>
     </div>
   </section>
-<section class="shop-category">
-  <h2>Shop by Category</h2>
-  <div class="categories">
-    <div class="category">
-      <img src="folder.img/playstation.png" alt="PS5">
-      <p>PlayStation 5</p>
+
+  <section class="shop-category">
+    <h2>Shop by Category</h2>
+    <div class="categories">
+      <div class="category">
+        <img src="folder.img/playstation.png" alt="PS5">
+        <p>PlayStation 5</p>
+      </div>
+      <div class="category">
+        <img src="folder.img/xboxw.png" alt="Xbox">
+        <p>Xbox</p>
+      </div>
+      <div class="category">
+        <img src="folder.img/nintendo.png" alt="Nintendo">
+        <p>Nintendo</p>
+      </div>
     </div>
-    <div class="category">
-      <img src="folder.img/xboxw.png" alt="Xbox">
-      <p>Xbox</p>
-    </div>
-    <div class="category">
-      <img src="folder.img/nintendo.png" alt="Nintendo">
-      <p>Nintendo</p>
-    </div>
-    
-  </div>
-</section>
+  </section>
+
+  <section class="delivery-strip">
+    <div class="feature-box">✅ 100% Authentic Games</div>
+    <div class="feature-box">🚚 Same-Day Delivery</div>
+    <div class="feature-box">🌍 Nationwide Delivery</div>
+    <div class="feature-box">🔒 Secure Payment</div>
+  </section>
+
   <div class="main-content">
     <div class="container" id="games">
 
       <div class="game" data-id="1">
-        <img src="folder.img/Call-of-Duty-Infinite-Warfare-PS4-474x600-1.webp" alt="Call of Duty">
+        <img src="folder.img/Call-of-Duty-Infinite-Warfare-PS4-474x600-1.jpg" alt="Call of Duty">
         <h4>Call of Duty</h4>
-        <p>Price: $50</p>
+        <p>Price: ₦50,000</p>
         <button onclick="addToCart(1)">Add to Cart</button>
       </div>
 
       <div class="game" data-id="2">
-        <img src="folder.img/God-of-War-Ragnarok-PS5-468x600-1.webp" alt="God of War">
+        <img src="folder.img/God-of-War-Ragnarok-PS5-468x600-1.jpg" alt="God of War">
         <h4>God of War</h4>
-        <p>Price: $30</p>
+        <p>Price: ₦30,000</p>
         <button onclick="addToCart(2)">Add to Cart</button>
       </div>
 
       <div class="game" data-id="3">
-        <img src="folder.img/Gran-Turismo-7-PS5-474x600-1.webp" alt="Gran Turismo 7">
+        <img src="folder.img/Gran-Turismo-7-PS5-474x600-1.jpg" alt="Gran Turismo 7">
         <h4>Gran Turismo 7</h4>
-        <p>Price: $20</p>
+        <p>Price: ₦20,000</p>
         <button onclick="addToCart(3)">Add to Cart</button>
       </div>
 
       <div class="game" data-id="4">
-        <img src="folder.img/Mortal-Kombat-1-PS5-472x600-1.webp" alt="Mortal Kombat">
+        <img src="folder.img/Mortal-Kombat-1-PS5-472x600-1.jpg" alt="Mortal Kombat">
         <h4>Mortal Kombat</h4>
-        <p>Price: $60</p>
+        <p>Price: ₦60,000</p>
         <button onclick="addToCart(4)">Add to Cart</button>
+      </div>
+       <div class="game" data-id="5">
+        <img src="folder.img/Grand-Theft-Auto-V-.jpg" alt="Grand Theft Auto V">
+        <h4>Grand Theft Auto V</h4>
+        <p>Price: ₦45,000</p>
+        <button onclick="addToCart(5)">Add to Cart</button>
       </div>
 
     </div>
   </div>
+<footer class="footer">
 
+  <div class="footer-middle">
+    <h2 class="footer-logo">Game<span>Nova</span></h2>
+    <p>Follow us on <strong>Social Media</strong></p>
+    <div class="footer-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png" alt="Instagram"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/facebook-new.png" alt="Facebook"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/twitterx.png" alt="X"/></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      <a href="#">Terms</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">CCPA</a> |
+      <a href="#">Copyright</a> |
+      <a href="#">Legal</a>
+    </p>
+    <p>&copy;2025 GameNova. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
 </body>
 </html>
