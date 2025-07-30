@@ -3,6 +3,24 @@ const games = [
   { id: 2, name: "God of War", price: 30000 },
   { id: 3, name: "Gran Turismo 7", price: 20000 },
   { id: 4, name: "Mortal Kombat", price: 60000 },
+  {id:  5, name:"Grand Auto Theft V", price:45000},
+  {id: 6, name: "Alane Wake II Deluxe Edition",price: 45000},
+  {id: 7, name: "Resident Evil 4-Ps5 ",price: 65000},
+  {id: 8, name: "Assassins Creed Shadows Standard Edition-xbox",price: 40000},
+  {id: 9, name: "Silent Hills 2-Ps5",price: 20000},
+  {id: 10, name: "EA SPORTS College Football 26 - Xbox Series",price: 70000},
+  {id: 11, name: "Dead Rising Deluxe Remaster-Xbox",price: 65000},
+  {id: 12, name: "Alone In The Dark-Ps5",price: 45000},
+  {id: 13, name: "Alone In The Dark-Xbox",price: 45000},
+  {id: 14, name: "Fallout",price: 35000},
+  {id: 15, name:  "Red Redemption - xbox",price: 30000},
+  {id: 16, name: "Split Fiction ps5",price: 27500},
+  {id: 17, name: "Star Wars Outlaws",price: 65000},
+  {id: 18, name: "Resident Evil 7-Ps5",price: 65000},
+  {id: 19, name: "Split Fiction-Xbox",price: 27500},
+  {id: 20, name: "Madden NFL 26 - PlayStation 5",price: 60000},
+
+
 ];
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];

@@ -10,30 +10,34 @@
 
 <body>
 
-  <header class="header">
+  <header>
+    <div class="logo-nav">
+      <img src="folder.img/WhatsApp Image 2025-07-30 at 08.19.27_88a349ad.jpg" alt="GameNova logo" class="logo">
+      <h1>🎮 GameNova</h1>
+    </div>
 
-      <div class="header-left">
-        <div class="logo"><h1>Game<span>Nova</span></h1></div>
-      </div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search games...">
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-      <div class="header-middle">
-        <input type="text" class="search-box" placeholder="Enter book title or Author">
-      </div>
+    <nav id="nav-menu">
+      <ul class="nav-buttons">
+        <li><button onclick="location.href='home.html'">HOME</button></li>
+        <li><button onclick="location.href='store.html'">STORE</button></li>
+        <li><button onclick="location.href='playstation.html'">PLAYSTATION</button></li>
+        <li><button onclick="location.href='xbox.html'">XBOX</button></li>
+          <li><button onclick="location.href='login.html'">SIGN UP/LOGIN</button></li>
+      </ul>
+    </nav>
 
-      
-      <div class="header-right" id="header-right-1"><a href="game.html">Home</a></div>
-
-      <div class="header-right" id="header-right-2">
-
-        <div class="signin">
-          <a href="login.html"><p class="signin-btn" id="signin-btn">Sign Up/Login</p></a>
-        </div>
-
-      </div>
-
-        <div class="header-right" id="header-right-3">
-  <a class="cart-btn" href="cart.html">My Cart</a>
-</div>
+    <div class="cart">
+      <h3><button style="cursor:pointer;" onclick="location.href='cart.html'">
+       🛒 CART (<span id="cart-count">0</span>)</button>
+      </h3>
+      </button>
+    </div>
+  </header>
 
   </header>
 
