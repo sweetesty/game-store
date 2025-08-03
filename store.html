@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Store</title>
+  <link rel="stylesheet" href="game.css" />
+  <script src="game.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo-nav">
+      <img src="folder.img/WhatsApp Image 2025-07-30 at 08.19.27_88a349ad.jpg" alt="GameNova logo" class="logo">
+      <h1>🎮 GameNova</h1>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search games...">
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav-menu">
+      <ul class="nav-buttons">
+        <li><button onclick="location.href='home.html'">HOME</button></li>
+        <li><button onclick="location.href='store.html'">STORE</button></li>
+        <li><button onclick="location.href='playstation.html'">PLAYSTATION</button></li>
+        <li><button onclick="location.href='xbox.html'">XBOX</button></li>
+          <li><button onclick="location.href='login.html'">SIGN UP/LOGIN</button></li>
+      </ul>
+    </nav>
+
+    <div class="cart">
+      <h3><button style="cursor:pointer;" onclick="location.href='cart.html'">
+       🛒 CART (<span id="cart-count">0</span>)</button>
+      </h3>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+  <div class="hero-text">
+    <h2>Call of Duty: Modern Warfare</h2>
+    <p>Dominate the battlefield</p>
+    <a href="#" class="btn" onclick="location.href='home.html'">Shop Now</a>
+  </div>
+</section>
+
+  <section class="shop-category">
+  <h2>Shop by Category</h2>
+  <div class="categories">
+
+    <a href="playstation.html" class="category">
+      <img src="folder.img/playstation.png" alt="PS5">
+      <p>PlayStation 5</p>
+    </a>
+
+    <a href="xbox.html" class="category">
+      <img src="folder.img/xboxw.png" alt="Xbox">
+      <p>Xbox</p>
+    </a>
+
+    <a href="home.html" class="category">
+      <img src="folder.img/nintendo.png" alt="Nintendo">
+      <p>Nintendo</p>
+    </a>
+
+  </div>
+</section>
+
+
+  <section class="delivery-strip">
+    <div class="feature-box">✅ 100% Authentic Games</div>
+    <div class="feature-box">🚚 Same-Day Delivery</div>
+    <div class="feature-box">🌍 Nationwide Delivery</div>
+    <div class="feature-box">🔒 Secure Payment</div>
+  </section>
+
+  <div class="main-content">
+    <div class="container" id="games">
+
+      <div class="game" data-id="1">
+        <img src="folder.img/Call-of-Duty-Infinite-Warfare-PS4-474x600-1.jpg" alt="Call of Duty">
+        <h4>Call of Duty</h4>
+        <p>Price: ₦50,000</p>
+        <button onclick="addToCart(1)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="2">
+        <img src="folder.img/God-of-War-Ragnarok-PS5-468x600-1.jpg" alt="God of War">
+        <h4>God of War</h4>
+        <p>Price: ₦30,000</p>
+        <button onclick="addToCart(2)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="3">
+        <img src="folder.img/Gran-Turismo-7-PS5-474x600-1.jpg" alt="Gran Turismo 7">
+        <h4>Gran Turismo 7</h4>
+        <p>Price: ₦20,000</p>
+        <button onclick="addToCart(3)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="4">
+        <img src="folder.img/Mortal-Kombat-1-PS5-472x600-1.jpg" alt="Mortal Kombat">
+        <h4>Mortal Kombat</h4>
+        <p>Price: ₦60,000</p>
+        <button onclick="addToCart(4)">Add to Cart</button>
+      </div>
+       <div class="game" data-id="5">
+        <img src="folder.img/Grand-Theft-Auto-V-.jpg" alt="Grand Theft Auto V">
+        <h4>Grand Theft Auto V</h4>
+        <p>Price: ₦45,000</p>
+        <button onclick="addToCart(5)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="6">
+        <img src="folder.img/alane wake II deluxe edition_.jpg" alt="Alane Wake II Deluexe Edition">
+        <h4>Alane Wake II Deluxe Edition </h4>
+        <p>Price: ₦45,000</p>
+        <button onclick="addToCart(6)">Add to Cart</button>
+      </div>
+       <div class="game" data-id="7">
+        <img src="folder.img/Resident Evil 4 - PS5.jpg" alt="Resident Evil 4-Ps5">
+        <h4>Resident Evil 4-Ps5 </h4>
+        <p>Price: ₦65,000</p>
+        <button onclick="addToCart(7)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="8">
+        <img src="folder.img/assassins-creed-shadows-standard-edition-xbox.webp" alt="Assassins Creed Shadows Standard Edition-xbox">
+        <h4>Assassins Creed Shadows Standard Edition-xbox </h4>
+        <p>Price: ₦40,000</p>
+        <button onclick="addToCart(8)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="9">
+        <img src="folder.img/silent hill 2 ps 50_.jpg" alt="Silent Hills 2-Ps5">
+        <h4>Silent Hills 2-Ps5 </h4>
+        <p>Price: ₦65,000</p>
+        <button onclick="addToCart(9)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="10">
+        <img src="folder.img/EA SPORTS College Football 26 - Xbox Series X_.jpg" alt="EA SPORTS College Football 26 - Xbox Series">
+        <h4>EA SPORTS College Football 26 - Xbox Series </h4>
+        <p>Price: ₦70,000</p>
+        <button onclick="addToCart(10)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="11">
+        <img src="folder.img/dead rising deluxe remaster.jpg" alt="Dead Rising Deluxe Remaster-Xbox">
+        <h4>Dead Rising Deluxe Remaster-Xbox </h4>
+        <p>Price: ₦65,000</p>
+        <button onclick="addToCart(11)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="12">
+        <img src="folder.img/alone in the dark ps5_.jpg" alt="Alone In The Dark-Ps5">
+        <h4>Alone In The Dark-Ps5 </h4>
+        <p>Price: ₦45,000</p>
+        <button onclick="addToCart(12)">Add to Cart</button>
+      </div>
+     
+      <div class="game" data-id="13">
+        <img src="folder.img/alone in the dark_.jpg" alt="Alone In The Dark-Xbox">
+        <h4>Alone In The Dark-Xbox </h4>
+        <p>Price: ₦45,000</p>
+        <button onclick="addToCart(13)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="14">
+        <img src="folder.img/fallout xbox.jpg" alt="Fallout">
+        <h4>Fallout </h4>
+        <p>Price: ₦35,000</p>
+        <button onclick="addToCart(14)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="15">
+        <img src="folder.img/red redemption xboxjpeg.jpeg" alt="Red Redemption - xbox">
+        <h4>Red Redemption - xbox </h4>
+        <p>Price: ₦30,000</p>
+        <button onclick="addToCart(15)">Add to Cart</button>
+      </div>
+
+      <div class="game" data-id="16">
+        <img src="folder.img/split fiction ps5_.jpg" alt="Split Fiction ps5">
+        <h4>Split Fiction ps5 </h4>
+        <p>Price: ₦27,500</p>
+        <button onclick="addToCart(16)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="17">
+        <img src="folder.img/star wars outlaws_.jpg" alt="Star Wars Outlaws">
+        <h4>Star Wars Outlaws </h4>
+        <p>Price: ₦65,000</p>
+        <button onclick="addToCart(17)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="18">
+        <img src="folder.img/Resident Evil 7- PS5_.jpg" alt="Resident Evil 7-Ps5">
+        <h4>Resident Evil 7-Ps5 </h4>
+        <p>Price: ₦65,000</p>
+        <button onclick="addToCart(18)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="19">
+        <img src="folder.img/split fiction xbox_.jpg" alt="Split Fiction-Xbox">
+        <h4>Split Fiction-Xbox </h4>
+        <p>Price: ₦27,500</p>
+        <button onclick="addToCart(19)">Add to Cart</button>
+      </div>
+      <div class="game" data-id="20">
+        <img src="folder.img/Madden NFL 26 - PlayStation 5_.jpg" alt="Madden NFL 26 - PlayStation 5">
+        <h4>Madden NFL 26 - PlayStation 5 </h4>
+        <p>Price: ₦60,000</p>
+        <button onclick="addToCart(20)">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+<footer class="footer">
+
+  <div class="footer-middle">
+    <h2 class="footer-logo">Game<span>Nova</span></h2>
+    <p>Follow us on <strong>Social Media</strong></p>
+    <div class="footer-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png" alt="Instagram"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/facebook-new.png" alt="Facebook"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/twitterx.png" alt="X"/></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      <a href="#">Terms</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">CCPA</a> |
+      <a href="#">Copyright</a> |
+      <a href="#">Legal</a>
+    </p>
+    <p>&copy;2025 GameNova. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+</body>
+</html>
