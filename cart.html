@@ -5,13 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Cart</title>
   <link rel="stylesheet" href="game.css" />
-  <script src="game.js" defer></script> <!-- Include external JS -->
+  <script src="game.js" defer></script> 
 </head>
 <body>
-  <header>
-    <h1>YOUR🛒 CART</h1>
-    <button onclick="location.href='home.html'">⬅ Back to Store</button>
+  <header> 
+    <h1>YOUR CART🛒</h1>
+    
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search games...">
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav-menu">
+      <ul class="nav-buttons">
+        <li><button onclick="location.href='index.html'">HOME</button></li>
+        <li><button onclick="location.href='store.html'">STORE</button></li>
+        <li><button onclick="location.href='playstation.html'">PLAYSTATION</button></li>
+        <li><button onclick="location.href='xbox.html'">XBOX</button></li>
+          <li><button onclick="location.href='login.html'">SIGN UP/LOGIN</button></li>
+          <button onclick="location.href='index.html'">⬅ Back to Store</button>
+      </ul>
+    </nav>
+    
   </header>
+  <section class="hero-banner">
+  <div class="hero-text">
+    <h2>Call of Duty: Modern Warfare</h2>
+    <p>Dominate the battlefield</p>
+    <a href="#" class="btn" onclick="location.href='index.html'">Shop Now</a>
+  </div>
+</section>
 
   <main>
     <ul id="cart-items"></ul>
