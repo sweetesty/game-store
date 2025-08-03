@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameNova - Best Gamestore In The World</title>
-    <link rel="stylesheet" href="game.css">
-    <script src="game.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GameNova - Login/Signup</title>
+  <link rel="stylesheet" href="game.css" />
+  <script src="game.js" defer></script>
 </head>
 
 <body>
@@ -19,6 +19,7 @@
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Search games...">
     </div>
+
     <div class="hamburger" onclick="toggleMenu()">☰</div>
 
     <nav id="nav-menu">
@@ -27,66 +28,100 @@
         <li><button onclick="location.href='store.html'">STORE</button></li>
         <li><button onclick="location.href='playstation.html'">PLAYSTATION</button></li>
         <li><button onclick="location.href='xbox.html'">XBOX</button></li>
-          <li><button onclick="location.href='login.html'">SIGN UP/LOGIN</button></li>
+        <li><button onclick="location.href='login.html'">SIGN UP/LOGIN</button></li>
       </ul>
     </nav>
 
     <div class="cart">
       <h3><button style="cursor:pointer;" onclick="location.href='cart.html'">
-       🛒 CART (<span id="cart-count">0</span>)</button>
+        🛒 CART (<span id="cart-count">0</span>)</button>
       </h3>
-      </button>
     </div>
-  </header>
-
   </header>
 
   <main>
-
     <div class="auth-form-container">
-      <div id="login-form" class="auth-form">
+      <div class="toggle-buttons">
+        <button id="show-login" class="active">Login</button>
+        <button id="show-signup">Sign Up</button>
+      </div>
+
+      <form id="login-form" class="auth-form">
         <h1>Login</h1>
-        <div><input type="text" placeholder="Phone number, username, or email"></div>
-        <div><input type="password" placeholder="Password"></div>
-        <div class="auth-btns"><button>Log in</button></div>
-        <p>OR</p>
-      </div>
+        <input type="text" placeholder="Phone number, username, or email" required>
+        <input type="password" placeholder="Password" required>
+        <div class="auth-btns"><button type="submit">Log in</button></div>
+      </form>
 
-      <div id="signup-form" class="auth-form">
+      <form id="signup-form" class="auth-form" style="display: none;">
         <h1>Sign Up</h1>
-        <div><input type="text" placeholder="Mobile Number or Email"></div>
-        <div><input type="password" placeholder="Password"></div>
-        <div><input type="text" placeholder="Full Name"></div>
-        <div><input type="text" placeholder="Username"></div>
-        <div class="auth-btns"><button>Sign Up</button></div>
+        <input type="text" placeholder="Mobile Number or Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Username" required>
+        <div class="auth-btns"><button type="submit">Sign Up</button></div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>Game<span>Nova</span></h2>
+        <p>Level up your gaming life.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">PlayStation</a></li>
+          <li><a href="#">Xbox</a></li>
+          <li><a href="#">Nintendo</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Account Login</a></li>
+          <li><a href="#">Shipping Info</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="icons">
+          <a href="#"><img src="https://img.icons8.com/ios-glyphs/24/ffffff/instagram-new.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/ios-glyphs/24/ffffff/facebook-new.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/ios-glyphs/24/ffffff/youtube-play.png"/></a>
+        </div>
       </div>
     </div>
-
-</main>
-
-<footer class="footer">
-
-  <div class="footer-middle">
-    <h2 class="footer-logo">Game<span>Nova</span></h2>
-    <p>Follow us on <strong>Social Media</strong></p>
-    <div class="footer-icons">
-      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png" alt="Instagram"/></a>
-      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/facebook-new.png" alt="Facebook"/></a>
-      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/twitterx.png" alt="X"/></a>
+    <div class="footer-credit">
+      <p>&copy; 2025 GameNova — Powered by Gamers for Gamers.</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p>
-      <a href="#">Terms</a> |
-      <a href="#">Privacy</a> |
-      <a href="#">CCPA</a> |
-      <a href="#">Copyright</a> |
-      <a href="#">Legal</a>
-    </p>
-    <p>&copy; 2025 GameNova. All Rights Reserved.</p>
-  </div>
-</footer>
+  <script>
+    const loginBtn = document.getElementById("show-login");
+    const signupBtn = document.getElementById("show-signup");
+    const loginForm = document.getElementById("login-form");
+    const signupForm = document.getElementById("signup-form");
+
+    loginBtn.addEventListener("click", () => {
+      loginForm.style.display = "block";
+      signupForm.style.display = "none";
+      loginBtn.classList.add("active");
+      signupBtn.classList.remove("active");
+    });
+
+    signupBtn.addEventListener("click", () => {
+      loginForm.style.display = "none";
+      signupForm.style.display = "block";
+      signupBtn.classList.add("active");
+      loginBtn.classList.remove("active");
+    });
+  </script>
 
 </body>
 </html>
